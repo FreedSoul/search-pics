@@ -1,11 +1,14 @@
 import React from 'react';
+import ImageCard from './ImageCard';
+import './ImageList.css'
 
 const ImageList = ({list}) => {
     
+    const renderList = list.map((image,index) => <ImageCard key={index} image={image}/>) 
     return(
-        <>
-        {list.map((image,index) => <div key={index} className="ui grid medium"><img src={image.urls.regular} alt={`car ${index}`}/></div>)}
-        </>
+        <div className="images-list">
+        {renderList}
+        </div>
     )
 }
 

@@ -12,10 +12,10 @@ const SearchBar = (props) =>{
     }
 
     return (
-        <div className="ui segment">
+        <div className="ui center aligned segment">
             <form onSubmit={onSearchSubmit} className="ui form">
                     {/* <label>buscar</label> */}
-                <div className="field inline">
+                <div className="ui icon input">
                     <input type="text" value={term} onChange={(event)=>{setTerm(event.target.value);console.log(term)}} />
                     <i className="search icon floated left" onClick={onSearchSubmit}/>
                 </div>

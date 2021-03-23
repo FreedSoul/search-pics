@@ -16,7 +16,7 @@ const ImageCard = (props) => {
     }
 
     return(
-        <div style={{gridRowEnd:`span ${spans}`}}>
+        <div className="span-row">
             <img ref={imgRef} src={props.image.urls.regular} alt={props.image.urls.alt_description}/>
         </div>
     )
